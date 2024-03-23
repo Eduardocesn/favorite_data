@@ -34,7 +34,7 @@ Future<void> writeData(List<List<dynamic>> dados) async{
     IOSink sink = file.openWrite();
 
     // Escreva os dados no arquivo
-    for (List<String> linha in dados) {
+    for (List<dynamic> linha in dados) {
       String linhaFormatada = '${linha.join(',')}\n'; // Adiciona uma quebra de linha
       sink.write(linhaFormatada);
     }
