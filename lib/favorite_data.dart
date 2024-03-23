@@ -4,8 +4,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
-Future<List<List<String>>> loadData() async {
-  List<List<String>> resultado = [];
+Future<List<List<dynamic>>> loadData() async {
+  List<List<dynamic>> resultado = [];
   try{
     final file = await _localFile;
     // Leia o conteúdo do arquivo
@@ -28,7 +28,7 @@ Future<List<List<String>>> loadData() async {
   return resultado;
 }
 
-Future<void> writeData(List<List<String>> dados) async{
+Future<void> writeData(List<List<dynamic>> dados) async{
   try {
     final file = await _localFile;
     IOSink sink = file.openWrite();
