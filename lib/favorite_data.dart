@@ -50,10 +50,8 @@ Future<void> writeData(List<List<dynamic>> dados) async{
 }
 
 Future<String> get _localPath async {
-  final directory = await getDownloadsDirectory();
-  if (directory != null){
-  return directory.path;}
-  else {return "";}
+  final directory = await getApplicationDocumentsDirectory();
+  return directory.path;
 }
 
 Future<File> get _localFile async {
