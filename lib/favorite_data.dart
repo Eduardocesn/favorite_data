@@ -43,7 +43,7 @@ Future<void> writeData(List<List<dynamic>> dados) async{
     await sink.flush();
     await sink.close();
 
-    print('Dados escritos com sucesso!');
+    print('Dados escritos com sucesso em ${file.path}!');
   } catch (e) {
     print("Erro ao escrever no arquivo");
   }
